@@ -25,8 +25,8 @@ By participating in this project you agree to abide by its terms.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
 
 ## Acknowledgments
 
-* http://openjdk.java.net/
+*  http://openjdk.java.net/
