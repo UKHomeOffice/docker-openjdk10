@@ -18,7 +18,7 @@ pipeline:
       - docker login -u="digperms" -p=$${ARTIFACTORY_TOKEN} docker.digital.homeoffice.gov.uk
       - docker tag openjdk10:$${DRONE_COMMIT_SHA} docker.digital.homeoffice.gov.uk/openjdk10:$${DRONE_COMMIT_SHA}
       - docker tag openjdk10:$${DRONE_COMMIT_SHA} docker.digital.homeoffice.gov.uk/openjdk10:latest
-      - docker push docker.digital.homeoffice.gov.uk:$${DRONE_COMMIT_SHA}
+      - docker push docker.digital.homeoffice.gov.uk/openjdk10:$${DRONE_COMMIT_SHA}
       - docker push docker.digital.homeoffice.gov.uk/openjdk10:latest
     when:
       event: push
