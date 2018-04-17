@@ -15,7 +15,7 @@ pipeline:
     environment:
       - DOCKER_HOST=tcp://172.17.0.1:2375
     commands:
-      - docker login -u="digperms" -p=$${ARTIFACTORY_TOKEN} docker.digital.homeoffice.gov.uk
+      - docker login -u="digperms" -p="${ARTIFACTORY_TOKEN}" docker.digital.homeoffice.gov.uk
       - docker tag openjdk10:$${DRONE_COMMIT_SHA} docker.digital.homeoffice.gov.uk/openjdk10:$${DRONE_COMMIT_SHA}
       - docker tag openjdk10:$${DRONE_COMMIT_SHA} docker.digital.homeoffice.gov.uk/openjdk10:latest
       - docker push docker.digital.homeoffice.gov.uk:$${DRONE_COMMIT_SHA}
@@ -30,7 +30,7 @@ pipeline:
     environment:
       - DOCKER_HOST=tcp://172.17.0.1:2375
     commands:
-      - docker login -u="digperms" -p=$${ARTIFACTORY_TOKEN} quay.io
+      - docker login -u="digperms" -p="${ARTIFACTORY_TOKEN}" docker.digital.homeoffice.gov.uk
       - docker tag openjdk10:$${DRONE_COMMIT_SHA} docker.digital.homeoffice.gov.uk/openjdk10:$${DRONE_TAG}
       - docker push docker.digital.homeoffice.gov.uk/openjdk10:$${DRONE_TAG}
     when:
