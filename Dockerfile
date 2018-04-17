@@ -1,5 +1,5 @@
 # Security patches etc. managed centrally
-# =========================================
+# ======================================
 FROM quay.io/ukhomeofficedigital/centos-base:latest
 
 # Install Open Java 10
