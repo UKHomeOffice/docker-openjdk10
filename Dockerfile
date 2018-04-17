@@ -3,7 +3,7 @@
 FROM quay.io/ukhomeofficedigital/centos-base:latest
 
 # Install Open Java 10
-# ===================
+# ======================
 
 # Set correct environment variables.
 ENV	HOME /root
