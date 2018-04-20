@@ -11,11 +11,11 @@ pipeline:
   image_to_quay:
     image: docker:17.09.1
     secrets:
-      - artifactory_token
+      - quay_token
     environment:
       - DOCKER_HOST=tcp://172.17.0.1:2375
     commands:
-      - docker login -u="digperms" -p=$${ARTIFACTORY_TOKEN} quay.io
+      - docker login -u="ukhomeofficedigital+digperms" -p=$${QUAY_TOKEN} quay.io
       - docker tag openjdk10:$${DRONE_COMMIT_SHA} quay.io/ukhomeofficedigital/openjdk10:$${DRONE_COMMIT_SHA}
       - docker tag openjdk10:$${DRONE_COMMIT_SHA} quay.io/ukhomeofficedigital/openjdk10:latest
       - docker push quay.io/ukhomeofficedigital/openjdk10:$${DRONE_COMMIT_SHA}
